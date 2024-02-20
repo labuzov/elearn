@@ -1,6 +1,7 @@
 import { FC } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { IconType } from 'react-icons';
+import classNames from 'classnames';
 
 import styles from './NavigationItem.module.scss';
 
@@ -14,9 +15,9 @@ type NavigationItemProps = {
 export const NavigationItem: FC<NavigationItemProps> = ({ to, text, Icon }) => {
 
     return (
-        <Link to={to} className={styles.item}>
+        <NavLink to={to} className={({ isActive }) => classNames(styles.item, isActive && styles.active)}>
             <Icon className={styles.icon} />
             <div className={styles.text}>{text}</div>
-        </Link>
+        </NavLink>
     );
 }

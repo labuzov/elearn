@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { FC } from 'react';
 
 import { Avatar } from '@Components/Avatar/Avatar';
 import styles from './OrganizationInfo.module.scss';
@@ -20,7 +20,7 @@ export const OrganizationInfo: FC<OrganizationInfoProps> = ({ title, info, iconL
                 text="СО"
                 src={iconLink}
                 className={styles.icon}
-                // size={40}
+                size={40}
             />
             <div className={styles.info}>
                 <div className={styles.title}>

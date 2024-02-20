@@ -11,10 +11,10 @@ type ResizeSplitterProps = {
     width?: number;
     className?: string;
     onIsActiveChange?: (isActive: boolean) => void;
-    onChangeWidth: (newWidth: number) => void;
+    onWidthChange: (newWidth: number) => void;
 };
 
-const ResizeSplitter: FC<ResizeSplitterProps> = ({ width, className, onIsActiveChange, onChangeWidth }) => {
+const ResizeSplitter: FC<ResizeSplitterProps> = ({ width, className, onIsActiveChange, onWidthChange }) => {
     const splitterXPosition = useRef<number | null>(null);
     const isActive = useRef(false);
 
@@ -56,16 +56,16 @@ const ResizeSplitter: FC<ResizeSplitterProps> = ({ width, className, onIsActiveC
         splitterXPosition.current = event.clientX;
     
         if (newWidth < MIN_WIDTH) {
-            onChangeWidth(MIN_WIDTH);
+            onWidthChange(MIN_WIDTH);
             return;
         }
 
         if (newWidth > MAX_WIDTH) {
-            onChangeWidth(MAX_WIDTH);
+            onWidthChange(MAX_WIDTH);
             return;
         }
     
-        onChangeWidth(newWidth);
+        onWidthChange(newWidth);
     };
 
     return (

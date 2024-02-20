@@ -1,7 +1,7 @@
 .wrapper {
     display: flex;
     align-items: center;
-    margin-bottom: 16px;
+    padding: 16px;
 }
 
 .icon {
@@ -24,5 +24,5 @@
 .subtitle {
     margin-top: 4px;
     font-size: 12px;
-    color: #888;
+    color: var(--color-text-secondary);
 }

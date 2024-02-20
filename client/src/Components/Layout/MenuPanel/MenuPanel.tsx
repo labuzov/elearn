@@ -2,21 +2,17 @@ import { CSSProperties, FC, useEffect, useState } from 'react';
 import classNames from 'classnames';
 
 import { Breakpoints, useAppViewStore } from '@Stores/AppViewStore';
-import { Button } from '@Components/Button/Button';
 
 import ResizeSplitter from './ResizeSplitter/ResizeSplitter';
+import { MenuPanelContent } from './MenuPanelContent/MenuPanelContent';
 import styles from './MenuPanel.module.scss';
-import { Navigation } from './Navigation/Navigation';
 
 
 const DEFAULT_WIDTH = 250;
 
-type MenuPanelProps = {
-}
-
-export const MenuPanel: FC<MenuPanelProps> = () => {
+export const MenuPanel: FC = () => {
     const { currentBreakpoint, isMenuOpen, setIsMenuOpen } = useAppViewStore(({ currentBreakpoint, isMenuOpen, setIsMenuOpen }) => ({ currentBreakpoint, isMenuOpen, setIsMenuOpen }));
-
+    
     const [width, setWidth] = useState(DEFAULT_WIDTH);
     const [isSplitterActive, setIsSplitterActive] = useState(false);
     const [isMobileView, setIsMobileView] = useState(false);
@@ -30,7 +26,7 @@ export const MenuPanel: FC<MenuPanelProps> = () => {
         }
     }, [currentBreakpoint]);
 
-    const handleChangeWidth = (newWidth: number) => {
+    const handleWidthChange = (newWidth: number) => {
         setWidth(newWidth);
     }
 
@@ -58,13 +54,13 @@ export const MenuPanel: FC<MenuPanelProps> = () => {
                 className={classNames(styles.panel, isSplitterActive && styles.disableTransition, isMobileView && styles.mobile)}
                 style={getPanelStyle()}
             >
-                <Navigation />
+                <MenuPanelContent />
 
                 {isMenuOpen && (
                     <ResizeSplitter
                         width={width}
                         className={styles.splitter}
-                        onChangeWidth={handleChangeWidth}
+                        onWidthChange={handleWidthChange}
                         onIsActiveChange={handleIsSplitterActiveChange}
                     />
                 )}
