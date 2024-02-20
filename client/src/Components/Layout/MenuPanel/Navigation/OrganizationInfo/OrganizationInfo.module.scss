@@ -1,0 +1,28 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.icon {
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.info {
+    overflow: hidden;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.subtitle {
+    margin-top: 4px;
+    font-size: 12px;
+    color: #888;
+}

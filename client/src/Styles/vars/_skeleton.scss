@@ -1,0 +1,9 @@
+:root {
+    --color-skeleton-bg-1: #eee;
+    --color-skeleton-bg-2: #e6e6e6;
+}
+
+body[data-theme="Dark"] {
+    --color-skeleton-bg-1: #262626;
+    --color-skeleton-bg-2: #303030;
+}

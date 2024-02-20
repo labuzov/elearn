@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+      "baseUrl": ".",
+      "paths": {
+        "@Components/*": ["src/Components/*"],
+        "@Stores/*": ["src/Stores/*"],
+        "@Hooks/*": ["src/Hooks/*"],
+        "@Helpers/*": ["src/Helpers/*"],
+        "@Api/*": ["src/Api/*"]
+      }
+    }
+}

@@ -1,0 +1,15 @@
+:root {
+    --color-input-bg: transparent;
+    --color-input-bg-disabled: #f2f2f2;
+    --color-input-border: #e4e4e4;
+    --color-input-border-disabled: #dddddd;
+    --color-input-border-hover: #cecece;
+}
+
+body[data-theme="Dark"] {
+    --color-input-bg: transparent;
+    --color-input-bg-disabled: #333;
+    --color-input-border: #444;
+    --color-input-border-disabled: #404040;
+    --color-input-border-hover: #555;
+}

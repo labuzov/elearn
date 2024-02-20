@@ -1,0 +1,53 @@
+@import "./input";
+@import "./button";
+@import "./notification";
+@import "./skeleton";
+
+:root {
+    --color-primary: #246AFE;
+
+    --color-text: #333;
+    --color-text-disabled: #aaa;
+    --color-bg: #f6f6f6;
+
+    --color-content-block-bg: #fff;
+    --shadow-content-block: 0px 0px 8px 0px rgba(0, 0, 0, 0.03);
+    
+    --color-header-bg: #fff;
+    --color-header-border: #c8c8c8;
+    --color-header-text: var(--color-text);
+    --shadow-header: 0px 0px 8px 0px #eee;
+
+    --color-menu-bg: #fff;
+    --shadow-menu: 8px 0px 8px -10px #eee;
+
+    --color-checkbox-bg: transparent;
+    --color-checkbox-border: #e4e4e4;
+
+    --color-divider: #ddd;
+
+    --color-select-indicator-bg-hover: #cecece40;
+
+    --color-error: #F03040;
+}
+
+body[data-theme="Dark"] {
+    --color-text: #ddd;
+    --color-text-disabled: #aaa;
+    --color-bg: #181818;
+
+    --color-content-block-bg: #222;
+    
+    --color-header-bg: #222;
+    --color-header-border: #444;
+    --color-header-text: var(--color-text);
+    --shadow-header: 0px 0px 8px 0px #222;
+
+    --color-menu-bg: #222;
+    --shadow-menu: 8px 0px 8px -10px #222;
+
+    --color-checkbox-bg: transparent;
+    --color-checkbox-border: #444;
+
+    --color-divider: #444;
+}

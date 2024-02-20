@@ -1,0 +1,17 @@
+:root {
+    --color-button-bg: var(--color-primary);
+    --color-button-bg-hover: #025FE0;
+    --color-button-border: var(--color-primary);
+    --color-button-border-hover: #025FE0;
+    --color-button-text: #fff;
+
+    --color-button-outline-bg: transparent;
+    --color-button-outline-bg-hover: #2469fe10;
+    --color-button-outline-border: var(--color-primary);
+    --color-button-outline-text: var(--color-primary);
+
+    --color-button-outline-secondary-bg: transparent;
+    --color-button-outline-secondary-bg-hover: #f0f0f0;
+    --color-button-outline-secondary-border: #cecece;
+    --color-button-outline-secondary-text: #666;
+}

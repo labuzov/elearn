@@ -1,0 +1,32 @@
+.panel {
+    position: relative;
+    flex-shrink: 0;
+    background-color: var(--color-menu-bg);
+    box-shadow: var(--shadow-menu);
+    transition: .3s;
+    overflow: hidden;
+
+    &.disableTransition {
+        transition: 0s;
+    }
+
+    &.mobile {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 99;
+
+        .splitter {
+            display: none;
+        }
+    }
+}
+
+.backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 98;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: .3s;
+}
